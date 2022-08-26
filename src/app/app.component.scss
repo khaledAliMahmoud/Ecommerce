@@ -1,0 +1,38 @@
+.sitePage{
+  width: 100vw;
+  height: 100vh;
+}
+
+.myHeader{
+  width: 100%;
+  height: 10%;
+  margin-top: 0% !important;
+}
+
+.Navbar{
+  width: 100%;
+  height: 8%;
+}
+
+.categories{
+  width: 100%;
+  height: 7%;
+  background-color: #f9f9f9;
+}
+
+.mainContent{
+  width: 100%;
+  height: 75%;
+  display: flex;
+
+  app-side-bar{
+    width: 15%;
+    height: 100%;
+  }
+
+  app-page-content{
+    width: 85%;
+    height: 100%;
+  }
+
+}

@@ -1,0 +1,34 @@
+<div class="NavbarPage">
+
+<h1>Freshnesecom</h1>
+
+<div class="search">
+
+  <div class="allCategories">
+
+  <p class="categories" (click)="ListBtn()" >All categories <img src="../../../assets/images/Vector.png" alt="" /> </p>
+
+  <div class="categoriesList" *ngIf="showList === true">
+    <p (click)="ListBtn()">All categories</p>
+    <p (click)="ListBtn()">Recent</p>
+    <p (click)="ListBtn()">Popular</p>
+  </div>
+
+</div>
+
+  <input type="text" [(ngModel)]="searching" (keyup)="searchingResult()" placeholder="Search">
+
+  <img src="../../../assets/images/ic-actions-search.png" alt="">
+
+
+
+
+</div>
+
+<div class="navImages">
+  <img src="../../../assets/images/ic-actions-user.png" alt="">
+  <img src="../../../assets/images/ic-ecommerce-basket.png" class="basket" alt="">
+  <span class="orderCounter" >{{_ApiServiceService.counter}}</span>
+</div>
+
+</div>
