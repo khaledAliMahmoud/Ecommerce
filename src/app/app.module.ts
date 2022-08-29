@@ -11,6 +11,7 @@ import { PageContentComponent } from './Components/page-content/page-content.com
 import { PageHeaderComponent } from './Components/page-header/page-header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ProductCardComponent } from './Components/product-card/product-card.component';
 
 
 
@@ -23,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     SideBarComponent,
     CategoriesBarComponent,
     PageContentComponent,
-    PageHeaderComponent
+    PageHeaderComponent,
+    ProductCardComponent
   ],
   imports: [
     BrowserModule,

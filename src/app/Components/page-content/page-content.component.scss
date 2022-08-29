@@ -6,94 +6,20 @@
   flex-wrap: wrap;
   overflow-x: hidden;
 
-  .product {
-    width: 20%;
-    height: 75%;
-    padding: 1%;
-    margin: 2%;
-    border: 1px solid lightgray;
-    border-radius: 12px;
-    box-shadow: 1px 1px 15px rgba(70, 70, 70, 0.747);
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-
-    .productImg {
-      width: 100%;
-      height: 60%;
-      margin-bottom: 7px;
-      background-color: gray;
-
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    }
-
-    .productTitle {
-      height: 15%;
-      padding-left: 1%;
-      margin-bottom: 5%;
-      p {
-        font-size: 12px;
-        color: #6a983c;
-      }
-    }
-
-    .productPrice {
-      width: 100%;
-      height: 15%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      p {
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 27px;
-        margin-bottom: 0%;
-      }
-
-      span {
-        // text-decoration-line: line-through;
-        color: #a9a9a9;
-      }
-
-      .addBtn {
-        width: 40%;
-        height: 80%;
-        cursor: pointer;
-        font-weight: bold;
-        color: white;
-        background: #6a983c;
-        padding: 8px;
-        border-radius: 12px;
-        border: 2px solid #46760a;
-        transition: all 0.4s ease;
-      }
-
-      .removeBtn {
-        width: 40%;
-        height: 80%;
-        cursor: pointer;
-        font-weight: bold;
-        color: white;
-        background: #c41313;
-        padding: 8px;
-        border-radius: 12px;
-        border: 2px solid black;
-        transition: all 0.4s ease;
-      }
-
-      button:hover{
-        width: 45%;
-
-      }
-
-    }
+  app-product-card{
+  width: 20%;
+  height: 75%;
+  padding: 1%;
+  margin: 2%;
+  border: 1px solid lightgray;
+  border-radius: 12px;
+  box-shadow: 1px 1px 15px rgba(70, 70, 70, 0.747);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
   }
 
-  .product:hover{
-    transform: scale(1.1);
+  app-product-card:hover{
+    transform: scale(1.15);
     box-shadow: none;
   }
 

@@ -12,7 +12,7 @@ export class ApiServiceService {
 
   categoryString=''
   scrollCounter:any = 0;
-  category: any;
+  category: any = '';
   defaultNum: any =10;
   products: any;
   searchResult = new BehaviorSubject(null);
@@ -29,9 +29,13 @@ export class ApiServiceService {
   }
 
   getProducts(productsNum):Observable<any>{
-    if(this.category)
-    this.categoryString=`/category/${this.category}`
+    if(this.category == ''){
+      this.categoryString=''
+    }else{
+      this.categoryString=`/category/${this.category}`
+    }
     return this._HttpClient.get(environment.apiLink+ this.categoryString, { params: {limit: productsNum} })
+   
   }
 
   getCategories():Observable<any>{

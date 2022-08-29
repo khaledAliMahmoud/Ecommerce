@@ -6,12 +6,11 @@
 
   <div class="allCategories">
 
-  <p class="categories" (click)="ListBtn()" >All categories <img src="../../../assets/images/Vector.png" alt="" /> </p>
+  <p class="categories" (click)="ListBtn()" >{{CategoryName}} <img src="../../../assets/images/Vector.png" alt="" /></p>
 
   <div class="categoriesList" *ngIf="showList === true">
-    <p (click)="ListBtn()">All categories</p>
-    <p (click)="ListBtn()">Recent</p>
-    <p (click)="ListBtn()">Popular</p>
+    <p (click)="[ListBtn() , useCategory('')]">All categories</p>
+    <p (click)="[ListBtn() , useCategory(category)]" *ngFor="let category of categories" >{{category}}</p>
   </div>
 
 </div>

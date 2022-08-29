@@ -1,27 +1,5 @@
 <div #dialogContentForScroll class="contentPage">
 
-<div class="product" *ngFor="let product of _ApiServiceService.products" >
-
-  <div class="productImg">
-    <img [src]="product.images[0]" alt="">
-  </div>
-
-  <div class="productTitle">
-    <h5>{{product.title}}</h5>
-    <p>{{product.description.substring(0,20)}}...</p>
-  </div>
-
-  <div class="productPrice">
-    <div>
-      <p>{{product.price}}$</p>
-      <span>{{product.discountPercentage}}% Discount</span>
-    </div>
-
-      <button class="addBtn" *ngIf="!buyBtn" (click)="pressBuyBtn('add')" >Buy now</button>
-      <button class="removeBtn" *ngIf="buyBtn" (click)="pressBuyBtn('remove')" >Remove</button>
-
-  </div>
-
-</div>
+<app-product-card *ngFor="let product of _ApiServiceService.products" [products]="product" ></app-product-card>
 
 </div>

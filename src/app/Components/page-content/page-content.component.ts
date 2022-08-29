@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { ApiServiceService } from 'src/app/api-service.service';
 
 
@@ -16,7 +16,7 @@ export class PageContentComponent implements OnInit {
   constructor(public _ApiServiceService:ApiServiceService) { }
 
   ngOnInit(): void {
-    this._ApiServiceService.loadProducts()
+   this._ApiServiceService.loadProducts()
   }
 
   ngAfterViewInit(): void {
