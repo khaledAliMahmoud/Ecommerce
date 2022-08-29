@@ -14,15 +14,15 @@
   height: 8%;
 }
 
-.categories{
-  width: 100%;
-  height: 7%;
-  background-color: #f9f9f9;
-}
+// .categories{
+//   width: 100%;
+//   height: 7%;
+//   background-color: #f9f9f9;
+// }
 
 .mainContent{
   width: 100%;
-  height: 75%;
+  height: 82%;
   display: flex;
 
   app-side-bar{
@@ -35,4 +35,24 @@
     height: 100%;
   }
 
+}
+
+@media screen and (max-width: 768px){
+  .mainContent{
+    width: 100%;
+    height: 82%;
+    display: flex;
+    justify-content: center;
+
+    app-side-bar{
+      width: 0% !important;
+      height: 0% !important;
+    }
+
+    app-page-content{
+      width: 75% !important;
+      height: 100% !important;
+    }
+
+}
 }

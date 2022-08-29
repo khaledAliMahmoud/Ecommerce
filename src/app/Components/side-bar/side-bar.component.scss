@@ -1,6 +1,4 @@
 .sidebarPage{
-  width: 100%;
-  height: 100%;
   padding-top: 15%;
   padding-left: 15%;
   display: flex;
@@ -20,4 +18,39 @@
     color: green;
   }
 
+}
+
+@media screen and (max-width: 768px){
+  .sidebarPage{
+    display: none !important;
+  }
+
+}
+
+@media screen and (min-width:769px) and (max-width: 992px){
+  .sidebarPage{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+
+  h4{
+   font-size: 18px;
+   font-weight: 400;
+  }
+
+}
+
+@media screen and (min-width:993px) and (max-width: 1200px){
+  .sidebarPage{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width:1201px) {
+  .sidebarPage{
+    width: 100%;
+    height: 100%;
+  }
 }
