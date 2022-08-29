@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   apiLink: 'https://dummyjson.com/products',
   categoryLink : 'https://dummyjson.com/products/categories',
-  
+
 };
 
 /*

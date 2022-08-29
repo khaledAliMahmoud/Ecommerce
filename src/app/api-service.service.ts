@@ -10,7 +10,9 @@ import { environment } from 'src/environments/environment';
 })
 export class ApiServiceService {
 
-  categoryString=''
+  apiLink:string = 'https://dummyjson.com/products';
+  categoryLink:string = 'https://dummyjson.com/products/categories';
+  categoryString='';
   scrollCounter:any = 0;
   category: any = '';
   defaultNum: any =10;
@@ -34,12 +36,13 @@ export class ApiServiceService {
     }else{
       this.categoryString=`/category/${this.category}`
     }
-    return this._HttpClient.get(environment.apiLink+ this.categoryString, { params: {limit: productsNum} })
-   
+
+    return this._HttpClient.get(this.apiLink + this.categoryString, { params: {limit: productsNum} })
+
   }
 
   getCategories():Observable<any>{
-    return this._HttpClient.get(environment.categoryLink)
+    return this._HttpClient.get(this.categoryLink)
   }
 
   searchProducts():Observable<any>{
@@ -67,5 +70,7 @@ export class ApiServiceService {
     })
 
   }
+
+
 
 }
